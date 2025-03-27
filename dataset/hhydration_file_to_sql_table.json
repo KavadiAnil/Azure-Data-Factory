@@ -1,0 +1,38 @@
+{
+	"name": "hhydration_file_to_sql_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "sno",
+				"type": "varchar"
+			},
+			{
+				"name": "sourceSchema",
+				"type": "varchar"
+			},
+			{
+				"name": "sourceTableName",
+				"type": "varchar"
+			},
+			{
+				"name": "LoadType",
+				"type": "varchar"
+			},
+			{
+				"name": "status",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "hydration"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

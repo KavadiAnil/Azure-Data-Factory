@@ -1,0 +1,28 @@
+{
+	"name": "Ds_output_To_HYdration_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_TO_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "pass.csv",
+				"folderPath": {
+					"value": "@replace(substring(utcNow(),0,10),'-','/')\n\n",
+					"type": "Expression"
+				},
+				"fileSystem": "hydrationfile"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

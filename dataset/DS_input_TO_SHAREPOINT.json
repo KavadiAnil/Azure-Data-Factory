@@ -1,0 +1,22 @@
+{
+	"name": "DS_input_TO_SHAREPOINT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_TO_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "HydrationFile.xlsx",
+				"fileSystem": "sharepoint"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

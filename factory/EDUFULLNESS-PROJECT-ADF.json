@@ -1,0 +1,9 @@
+{
+	"name": "EDUFULLNESS-PROJECT-ADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ffe10b1b-f581-4cb1-99b6-872ee6fd896b",
+		"tenantId": "f5d50624-1857-4317-8a2b-568a966899fe"
+	}
+}

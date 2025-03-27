@@ -1,0 +1,34 @@
+{
+	"name": "MATSER PIPLINE",
+	"properties": {
+		"activities": [
+			{
+				"name": "MASTER HYDRATION FILE",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "HYDRATION TO SHARE POINT",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"variables": {
+			"timevalue": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "EDUFULLNESS-PROJECT"
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-03-09T04:14:25Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
